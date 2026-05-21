@@ -5,18 +5,17 @@ import java.util.*;
 class FindDup{
     public static void main(String[] args)
     {
-        List<String> words = Arrays.asList(
-                "apple", "banana", "orange", "apple", "grape",
-                "banana", "kiwi", "apple", "mango", "orange");
+        List<Integer> numbers = Arrays.asList(
+                1,1,2,3,4,5,6,7,8,9,10,8,7,3,4);
 
-        Set<String> sts = new HashSet<>();
+        Set<Integer> nmbr = new HashSet<>();
 
-        List<String> fruits = words
+        List<Integer> n1 = numbers
                 .stream()
-                .filter(str -> !sts.add(str)) //sts.add(str))==false
+                .filter(n -> !nmbr.add(n)) //n1.add(n))==false
                 .toList();
 
-        System.out.println("Duplicate entries are :"+fruits);
+        System.out.println("Duplicate entries are :"+n1);
 
     }
 }
